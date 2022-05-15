@@ -67,9 +67,11 @@ For a neuron of subsequent layers, a weighted sum of outputs of all the neurons 
 This process continues till the output of the last layer’s (l=L) neurons has been evaluated. These neurons at the output layer are responsible for identifying the class the input vector belongs to. The input vector is labeled with the class whose corresponding neuron has the highest output value.
 
 Please note that the activation functions can be different for each layer. The two activation functions that we will use for our ChatBot, which are also most commonly used are Rectified Linear Unit (ReLu) function and Softmax function. The former will be used for hidden layers while the latter is used for the output layer. The softmax function is usually used at the output for it gives probabilistic output. The ReLU function is defined as:
+
 ![image](https://user-images.githubusercontent.com/46298232/168482864-5d201e6e-a4df-41fc-b5b9-7fc951366519.png)
 
 and the Softmax function is defined as:
+
 ![image](https://user-images.githubusercontent.com/46298232/168482881-d633b726-e097-4711-bff0-b1c768cbd501.png)
 
 ### 2. Backpropagation of Error to train Neural Network
@@ -77,6 +79,7 @@ and the Softmax function is defined as:
 This step is the most important one because the original task of the Neural Network algorithm is to find the correct set of weights for all the layers that lead to the correct output and this step is all about finding those correct weights and biases. Consider an input vector that has been passed to the network and say, we know that it belongs to class A. Assume the output layer gives the highest value for class B.  There is therefore an error in our prediction. Now, since we can only compute errors at the output, we have to propagate this error backward to learn the correct set of weights and biases.
 
 Let us define the error function for the network:
+
 ![image](https://user-images.githubusercontent.com/46298232/168482924-9f105686-2695-4d45-b340-fe9acf010c19.png)
 ![image](https://user-images.githubusercontent.com/46298232/168482928-3d7c63c6-913e-4156-8bbc-112735bb2683.png)
 
